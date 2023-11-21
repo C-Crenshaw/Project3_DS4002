@@ -1,6 +1,6 @@
 # Source Code Folder for Project 3
 
-Updated verisons of the source code are included in this file. Python file and Jupyter Notebook file types of "P3_Source_Code" are included. 
+Updated verisons of the source code are included in this file. Python file and Jupyter Notebook file types of "P3_Source_Code" are included. The Jupyter Notebook contains a link to the original Google Colaboratory file. 
 
 
 Within the files, the structure of the code is largely oriented around four sections: Data Cleaning, Data Visualization, Machine Learning, and Future Analysis. Users should follow each section carefully to reproduce the desired outputs. This ReadMe includes a supplemental documentation to the main repository and gives a detailed account of each section's code, specifically with respect to the imports necessary for each section. 
