@@ -81,7 +81,7 @@ WHR.to_csv('WHR.csv', index=False)
 
 * After cleaning the dataset using the code above, the resulting table should look similar to the one provided below:
   
-![CleanedData](https://github.com/C-Crenshaw/Project3_DS4002/blob/519cd6610566cef58de11e2b2f7d6661f64622d0/FIGURES/CleanedDatasetTable.png)https://github.com/C-Crenshaw/Project3_DS4002/blob/519cd6610566cef58de11e2b2f7d6661f64622d0/FIGURES/CleanedDatasetTable.png)
+![CleanedData](https://github.com/C-Crenshaw/Project3_DS4002/blob/519cd6610566cef58de11e2b2f7d6661f64622d0/FIGURES/CleanedDatasetTable.png)
 
 * An extensive exploratory data analysis was conducted with respect to countries’ happiness scores and the six life evaluation variables. The project group constructed interactive interfaces that allow users to investigate the cleaned dataset, ultimately highlighting which of the variables demonstrate a clear relationship with happiness scores. The subsequent regression analysis was be built from the conclusions derived from the graphical representations as they will indicate which of the six variables may have an illustrated relationship with happiness scores.
 
