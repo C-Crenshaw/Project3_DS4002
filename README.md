@@ -71,6 +71,8 @@ WHR = WHR.drop(columns=["Country Code", "Continent Code"]).reset_index()
 #Cleaned dataset
 WHR
 ```
+* After cleaning the dataset using the code above, the resulting table should look similar to the one provided below:
+![CleanedData](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 
 
