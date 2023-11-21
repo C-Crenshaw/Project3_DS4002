@@ -27,6 +27,7 @@ This section contains all the source code for the project. All code has been con
 The usage section focuses on the most complex aspects of the final code, highlighting the most important aspects of the final code. A supplemental documentation of the code usage can be found in the SRC folder on the main repository page (linked above). 
 
 * This section describes key steps for setting up the development environment and running the time-series regression model. All necessary imports are loaded into the 'P3_Source_Code.py' and 'P3_Source_Code.ipynb' file. These necessary packages are repeated below. These imports include those standard to most Python projects and the Sklearn package utilized for the construction and testing of a regression model.
+
 ```
 #Standard imports
 import pandas as pd
@@ -42,6 +43,7 @@ WHR = pd.read_excel(r"/content/WHR Data.xls")
 ```
 
 * As a consequence of limited international information sharing, some values were missing and not all countries were present across the time measured. To account for this unfortunate constraint, the project group decided to carry out this analysis specifically for the years 2013-2019. Despite the presence of much data from 2020 and 2021, these years were excluded because they were unprecedented years with clear and strong confounding factors. The final range (2013-2019) was selected due to the retention of countries as detailed in the data cleaning process. In other words, this data cleaning process (which only includes countries that had a complete reference of data for the time period aforementioned) left the largest complete dataset possible. However, data from 2022 will be used to assess the model’s accuracy beyond the train test split for 2013-2019.
+
 ```
 #Drop rows with nan values
 WHR = WHR.dropna()
@@ -76,10 +78,13 @@ WHR
 #Exporting dataset
 WHR.to_csv('WHR.csv', index=False)
 ```
+
 * After cleaning the dataset using the code above, the resulting table should look similar to the one provided below:
+  
 ![CleanedData](https://github.com/C-Crenshaw/Project3_DS4002/blob/519cd6610566cef58de11e2b2f7d6661f64622d0/FIGURES/CleanedDatasetTable.png)https://github.com/C-Crenshaw/Project3_DS4002/blob/519cd6610566cef58de11e2b2f7d6661f64622d0/FIGURES/CleanedDatasetTable.png)
 
 * An extensive exploratory data analysis was conducted with respect to countries’ happiness scores and the six life evaluation variables. The project group constructed interactive interfaces that allow users to investigate the cleaned dataset, ultimately highlighting which of the variables demonstrate a clear relationship with happiness scores. The subsequent regression analysis was be built from the conclusions derived from the graphical representations as they will indicate which of the six variables may have an illustrated relationship with happiness scores.
+
 ```
 #Data viz import
 import plotly.express as px
@@ -114,6 +119,7 @@ px.scatter(WHR, "Corruption", "Happiness Score", color = "Continent", hover_name
 ```
 
 * A time-series regression analysis was used to develop a model which was trained and tested on the cleaned dataset. The accuracy of the model was then evaluated both on the cleaned dataset and on the reserved data from 2022. The final and most significant life evaluation factors (as determined by the previous graphs) were therefore used to predict future happiness scores.
+
 ```
 #Read in cleaned dataset
 WHR = pd.read_csv(r"/content/WHR.csv")
@@ -194,7 +200,8 @@ print("MSE is ", round(mse,5), " and RMSE is ", round(rmse,5))
 ```
 
 * After running the regression model in order to generate happiness score predictions for 2022, the resulting table with the appended scores should look similar to the one provided below:
-![PredictedData]()
+  
+![PredictedData](https://github.com/C-Crenshaw/Project3_DS4002/blob/25f2f6d8c43f9a39bce51e6054142064107889d5/FIGURES/PredictedDatasetTable.png)
 
 
 
